@@ -1,0 +1,22 @@
+ <head class="page-header"><a target="_blank" href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15">Go to StackOverflow</a>
+ </head>
+ 
+
+<p>user : {{user.username}}</p>
+
+<p> Why do you decide to log these actions? Well, here's how they can be used for final project case (2):</p>
+ <ol>
+    <li>Text Selected tells us about what topics user is interestd in. This is useful for recommending similar topics.</li>
+    <li>Vote gives us feedback whether user found satisfied answer. If downvoted, we can recommend similar questions wih higher votes.</li>
+    <li>Share/comments can provide information that user is having either a doubt or is giving more explanation to an answer. This is helpful in recommending similar topics. </li>
+    <li>Asked a question column tells us in which topic user is having questions and we can recommend those topic's notes in our final project. </li>  
+    <li>Clicking on a question gives us the best information on what topics the user is inteested in. We can find areas which requires more notes and cheat sheets.</li>
+</ol>
+<b>Login History</b>
+
+
+<ul>
+	{{#each user.history}}
+		<li>{{this}}</li>
+	{{/each}}
+</ul>

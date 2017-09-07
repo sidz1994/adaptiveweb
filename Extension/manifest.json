@@ -1,0 +1,38 @@
+ {
+  "manifest_version": 2,
+  "name": "Activity Tracker",
+  "description": "This extension tracks user activity only when webpage is stackoverflow",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+   "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "activeTab",
+    "https://*/*/*",
+    "https://*/*",  
+    "history",
+    "browsingData",
+    "tabs",
+    "<all_urls>",
+    "http://*/*",
+    "storage",
+    "background"
+ ],
+    "background":{
+    "scripts":["background.js"]
+  },
+    "content_scripts": [
+    {
+    "matches":["https://stackoverflow.com/*"],
+    "js":["content.js"]
+    }
+  ]
+}
+
+
+
+
+ 

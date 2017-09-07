@@ -1,0 +1,40 @@
+<br><br>
+<head> Behavioral interaction logs of user : {{user.username}} </head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+<table style="width:100%">
+    <tr>
+        <th>Text Seleted</th>
+        <th>Vote</th>
+        <th>Comment||Shared</th>
+        <th>Asked a Question at</th>
+        <th>Link Selected</th>
+   </tr>
+   <tr>
+        <th> {{#each user.TextSelected}}
+                <li>{{this}}</li>
+                {{/each}}
+        </th>
+        <th>
+            <ul>
+                {{#each user.Vote}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </th>
+        <th> {{#each user.Comment_Share}}
+                <li>{{this}}</li>
+                {{/each}}</th>
+        
+        <th> {{#each user.AskedQuestion}}
+                <li>{{this}}</li>
+                {{/each}}</th>
+        <th> {{#each user.LinkSelected}}
+                <li>{{this}}</li>
+                {{/each}}</th>
+    </tr>
+</table>
+
